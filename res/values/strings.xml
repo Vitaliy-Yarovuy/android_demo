@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">studentlists</string>
+    <string name="student_add">Student add</string>
+    <string name="student_list">Student list</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="is_delete_group">Are you sure you want to delete group?</string>
+    <string name="data_not_saved">Your data not saved</string>
+    <string name="create_group">Create group</string>
+    <string name="create">Create</string>
+    <string name="cancel">Cancel</string>
+    <string name="is_delete_student">Are you sure you want to delete student?</string>
+    <string name="name">Name</string>
+    <string name="group">Group:</string>
+    <string name="edit">edit</string>
+    <string name="remove">remove</string>
+    <string name="save">save</string>
+    <string name="hello_groups">Hello Groups !!!</string>
+    <string name="number">number</string>
+    <string name="last_name">Last name</string>
+    <string name="student_profile">Student profile</string>
+</resources>

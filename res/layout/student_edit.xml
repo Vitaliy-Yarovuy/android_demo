@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="fill_parent"
+    android:layout_width="fill_parent"
+    android:orientation="vertical"
+    >
+    <TableLayout android:layout_height="wrap_content"
+            android:layout_width="fill_parent"
+            android:layout_weight="1"
+            >
+        <TableRow>
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:gravity="center"
+                android:text="@string/student_profile"
+                android:textSize="20dip"
+                >
+            </TextView>
+        </TableRow>
+        <TableRow>
+            <TextView android:text="First name"
+                      android:padding="3dip">
+            </TextView>
+            <EditText android:id="@+id/first_name_input"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="10dip"
+                    >
+            </EditText>
+        </TableRow>
+        <TableRow>
+            <TextView android:text="@string/last_name"
+                      android:padding="3dip">
+            </TextView>
+            <EditText android:id="@+id/last_name_input"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="10dip"
+                    >
+            </EditText>
+        </TableRow>
+        <TableRow>
+            <TextView android:text="@string/number"
+                      android:padding="3dip">
+            </TextView>
+            <EditText android:id="@+id/number_input"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="10dip"
+                    >
+            </EditText>
+        </TableRow>
+    </TableLayout>
+    <Button android:id="@+id/button_save"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/save"
+        >
+    </Button>
+</LinearLayout>
+
+
