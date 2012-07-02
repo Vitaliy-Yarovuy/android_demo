@@ -5,23 +5,33 @@ import android.app.Dialog;
 import android.app.ListActivity;
 import android.content.DialogInterface;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.*;
 import android.content.Intent;
+import com.example.model.DatabaseHelper;
 import com.example.model.Group;
-import com.example.model.GroupRepository;
+import com.example.model.Sport;
 import com.example.model.Student;
+import com.j256.ormlite.android.apptools.OrmLiteBaseListActivity;
+import com.j256.ormlite.dao.Dao;
+import com.j256.ormlite.stmt.QueryBuilder;
 
-public class GroupListActivity extends ListActivity implements View.OnClickListener {
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+
+    public class GroupListActivity extends OrmLiteBaseListActivity<DatabaseHelper> implements View.OnClickListener {
     private final static String TAG = "GroupListActivity";
     private final static String FILE_FOR_DATA = "student.xml";
     private final static int GROUP_EDIT = 101;
     private final static int GROUP_REMOVE = 102;
     private final static int GROUP_ADD = 103;
-    public final static String GROUP = "group";
-    private GroupRepository groups;
+    public final static String  GROUP_ID = "group_id";
+    private List<Group> groups;
     private int selectedIndex;
     private DialogInterface.OnClickListener onRemoveSelected;
 
@@ -32,59 +42,28 @@ public class GroupListActivity extends ListActivity implements View.OnClickListe
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
-        try{
-            groups = GroupRepository.load(openFileInput(FILE_FOR_DATA));
-        }catch (Exception e){
-            groups = new GroupRepository();
-            addContent();
-        }
-
-
-        setListAdapter(new ArrayAdapter<Group>(this, 0, groups) {
-            @Override
-            public View getView(int position, View convertView, ViewGroup parent) {
-                if (convertView == null) {
-                    LayoutInflater inflater = getLayoutInflater();
-                    convertView = inflater.inflate(android.R.layout.simple_list_item_1, parent, false);
-                }
-                Group group = getItem(position);
-                TextView label = (TextView) convertView.findViewById(android.R.id.text1);
-                label.setText(group.getName());
-                return convertView;
-            }
-        });
         ImageButton btnAdd = (ImageButton) findViewById(R.id.button_add);
         btnAdd.setOnClickListener(this);
-    }
 
-    @Override
-    public void onDestroy(){
-        try{
-            GroupRepository.save(openFileOutput(FILE_FOR_DATA,MODE_PRIVATE),groups);
-        }
-        catch(Exception e){
-            Toast.makeText(this,getString(R.string.data_not_saved),Toast.LENGTH_SHORT);
-        }
-        super.onDestroy();
-
+        addContent();
     }
 
 
     @Override
     protected void onListItemClick(ListView l, View v, int position, long id) {
         ToggleButton toggleButton = (ToggleButton)findViewById(R.id.button_edit_remove);
-        Group group = (Group) l.getItemAtPosition(position);
+        final Group group = (Group) l.getItemAtPosition(position);
         selectedIndex = position;
         if(toggleButton.isChecked()){
             Intent addIntent = new Intent();
             addIntent.setClass(this, StudentListActivity.class);
-            addIntent.putExtra(GroupListActivity.GROUP,group);
+            addIntent.putExtra(GroupListActivity.GROUP_ID,group.getId());
             startActivityForResult(addIntent, GROUP_EDIT);
         }else{
             onRemoveSelected = new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialogInterface, int i) {
-                    removeGroup(selectedIndex);
+                    removeGroup(group);
                 }
             };
             showDialog(GROUP_REMOVE);
@@ -134,8 +113,8 @@ public class GroupListActivity extends ListActivity implements View.OnClickListe
         if(resultCode == RESULT_OK){
             switch (requestCode){
                 case GroupListActivity.GROUP_EDIT:
-                    group = (Group)data.getParcelableExtra(GroupListActivity.GROUP);
-                    setGroup(selectedIndex,group) ;
+                    ListView list = getListView();
+                    list.invalidateViews();
                     break;
             }
         }
@@ -153,29 +132,86 @@ public class GroupListActivity extends ListActivity implements View.OnClickListe
         list.invalidateViews();
     }
     private void addGroup(Group group){
+        try{
+            Dao<Group, Integer> dao = getHelper().getGroupDao();
+            dao.create(group);
+        }catch (SQLException e){
+            throw new RuntimeException(e);
+        }
         groups.add(group);
         ListView list = getListView();
         list.invalidateViews();
     }
 
-    private void removeGroup(int index){
-        groups.remove(index);
+    private void removeGroup(Group group){
+        try{
+            Student student;
+            Dao<Group, Integer> dao = getHelper().getGroupDao();
+            Dao<Student, Integer> studentDao = getHelper().getStudentDao();
+            Iterator<Student> iterator = group.getStudents().iterator();
+            while(iterator.hasNext()){
+                studentDao.delete(iterator.next());
+            }
+            dao.delete(group);
+        }catch (SQLException e){
+            throw new RuntimeException(e);
+        }
+        groups.remove(group);
         ListView list = getListView();
         list.invalidateViews();
     }
 
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+        try{
+            Dao<Group, Integer> dao = getHelper().getGroupDao();
+            QueryBuilder<Group, Integer> builder = dao.queryBuilder();
+            builder.limit(30L);
+            groups = dao.query(builder.prepare());
+        }
+        catch (SQLException e){
+            groups = new ArrayList<Group>();
+        }
+
+        setListAdapter(new ArrayAdapter<Group>(this, 0, groups) {
+            @Override
+            public View getView(int position, View convertView, ViewGroup parent) {
+                if (convertView == null) {
+                    LayoutInflater inflater = getLayoutInflater();
+                    convertView = inflater.inflate(android.R.layout.simple_list_item_1, parent, false);
+                }
+                Group group = getItem(position);
+                TextView label = (TextView) convertView.findViewById(android.R.id.text1);
+                label.setText(group.getName());
+                return convertView;
+            }
+        });
+
+    }
+
+
     private void addContent() {
-        Group group1 = new Group("group-1");
-        group1.add(new Student("Ava","Henderson","082212323"));
-        group1.add(new Student("Amm","Vatson","0811123243"));
-        group1.add(new Student("Dirsy","Villa","0811123243"));
-        groups.add(group1);
-        Group group2 = new Group("group-2");
-        group2.add(new Student("Erica","Sundry","0823453"));
-        group2.add(new Student("Greta","Gersy","081345"));
-        group2.add(new Student("Masha","Drendy","08345"));
-        groups.add(group2);
+
+        List<Sport> sports;
+        try{
+            Dao<Sport, Integer> dao = getHelper().getSportDao();
+            QueryBuilder<Sport, Integer> builder = dao.queryBuilder();
+            builder.limit(1L);
+            sports = dao.query(builder.prepare());
+            if(sports.size()==0){
+                dao.create(new Sport("Football","Football refers to a number of sports that involve, to varying degrees, kicking a ball with the foot to score a goal."));
+                dao.create(new Sport("Volleyball","Volleyball is a team sport in which two teams of six players are separated by a net. Each team tries to score points by grounding a ball on the other team's court under organized rules."));
+                dao.create(new Sport("Rowing","Rowing is a sport in which athletes race against each other on rivers, on lakes or on the ocean, depending upon the type of race and the discipline."));
+                dao.create(new Sport("Skiing","Skiing is a way of traveling over snow, using skis strapped to one's feet. In modern times it has been mostly an athletic activity."));
+                dao.create(new Sport("Biathlon","Biathlon is a term used to describe any sporting event made up of two disciplines. However, biathlon usually refers specifically to the winter sport that combines cross-country skiing and rifle shooting."));
+                dao.create(new Sport("Bicycle","Bicycle racing is a competition sport in which various types of bicycles are used.Bicycle races are popular all over the world, especially in Europe."));
+            }
+        }
+        catch (SQLException e){
+            throw new RuntimeException(e);
+        }
     }
 
 }

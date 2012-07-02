@@ -6,7 +6,7 @@
     >
     <TableLayout android:layout_height="wrap_content"
             android:layout_width="fill_parent"
-            android:layout_weight="1"
+            android:layout_weight="0"
             >
         <TableRow>
             <TextView
@@ -55,6 +55,13 @@
             </EditText>
         </TableRow>
     </TableLayout>
+    <ListView android:id="@+id/list_sports"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:layout_weight="1"
+              >
+
+    </ListView>
     <Button android:id="@+id/button_save"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"

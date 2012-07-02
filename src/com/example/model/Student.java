@@ -3,17 +3,32 @@ package com.example.model;
 
 import android.os.Parcel;
 import android.os.Parcelable;
+import com.j256.ormlite.dao.ForeignCollection;
+import com.j256.ormlite.field.DatabaseField;
+import com.j256.ormlite.field.ForeignCollectionField;
+import com.j256.ormlite.table.DatabaseTable;
 import org.simpleframework.xml.Element;
 import org.simpleframework.xml.Root;
 
 
-@Root
-public class Student implements Parcelable {
-    @Element
+@DatabaseTable(tableName = "students")
+public class Student  {
+    public static final String ID = "id";
+
+    @DatabaseField(generatedId = true, columnName = Student.ID)
+    private Integer id;
+
+    @DatabaseField(canBeNull = true, foreign = true)
+    private Group group;
+
+
+    @ForeignCollectionField
+    private ForeignCollection<StudentSport> studentSports;
+    @DatabaseField
     private String name;
-    @Element
+    @DatabaseField
     private String lastName;
-    @Element
+    @DatabaseField
     private String number;
 
     public Student(){
@@ -25,6 +40,10 @@ public class Student implements Parcelable {
          this.lastName=lastName;
          this.number=number;
 
+    }
+
+    public Integer getId() {
+        return id;
     }
 
     public String getName() {
@@ -51,6 +70,14 @@ public class Student implements Parcelable {
         this.number = number;
     }
 
+    public Group getGroup() {
+        return group;
+    }
+
+    public void setGroup(Group group) {
+        this.group = group;
+    }
+
     @Override
     public String toString(){
         StringBuilder buff= new StringBuilder();
@@ -59,30 +86,5 @@ public class Student implements Parcelable {
         buff.append("number:"+this.number+"\n");
         return buff.toString();
     }
-
-    @Override
-    public int describeContents() {
-        return 0;
-    }
-
-    @Override
-    public void writeToParcel(Parcel parcel, int i) {
-        parcel.writeString(this.name);
-        parcel.writeString(this.lastName);
-        parcel.writeString(this.number);
-    }
-
-    public static final Parcelable.Creator<Student> CREATOR = new Parcelable.Creator<Student>() {
-        public Student createFromParcel(Parcel in) {
-            String name = in.readString();
-            String lastName = in.readString();
-            String number = in.readString();
-            return new Student(name,lastName,number);
-        }
-
-        public Student[] newArray(int size) {
-            return new Student[size];
-        }
-    };
 
 }

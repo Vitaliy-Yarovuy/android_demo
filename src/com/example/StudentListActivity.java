@@ -2,26 +2,32 @@ package com.example;
 
 import android.app.AlertDialog;
 import android.app.Dialog;
-import android.app.ListActivity;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.*;
+import com.example.model.DatabaseHelper;
 import com.example.model.Group;
 import com.example.model.Student;
+import com.j256.ormlite.android.apptools.OrmLiteBaseListActivity;
+import com.j256.ormlite.dao.Dao;
+import com.j256.ormlite.stmt.QueryBuilder;
 
-public class StudentListActivity extends ListActivity {
+import java.sql.SQLException;
+import java.util.List;
+
+public class StudentListActivity extends OrmLiteBaseListActivity<DatabaseHelper> {
     private final static String TAG = "StudentListActivity";
     private final static int STUDENT_ADD = 100;
     private final static int STUDENT_EDIT = 101;
     private final static int STUDENT_REMOVE = 102;
-    public final static String STUDENT = "student";
+    public final static String STUDENT_ID = "student_id";
     private Group group;
     private DialogInterface.OnClickListener onRemoveSelected;
-    private Button btnSave;
     private int selectIndex;
 
     /**
@@ -32,21 +38,42 @@ public class StudentListActivity extends ListActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.group);
 
-        group = (Group)getIntent().getParcelableExtra(GroupListActivity.GROUP);
+        try {
+            int groupId = (int) getIntent().getIntExtra(GroupListActivity.GROUP_ID, 0);
+            Dao<Group, Integer> dao = getHelper().getGroupDao();
+            QueryBuilder<Group, Integer> builder = dao.queryBuilder();
+            builder.where().eq(Group.ID, groupId);
+            group = dao.query(builder.prepare()).get(0);
+        }
+        catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        Toast.makeText(StudentListActivity.this, "student on resume", Toast.LENGTH_LONG).show();
+
         ListView list = getListView();
-        setListAdapter(new ArrayAdapter<Student>(this, 0, group) {
+        setListAdapter(new ArrayAdapter<Student>(this, 0) {
             @Override
             public View getView(int position, View convertView, ViewGroup parent) {
                 if (convertView == null) {
                     LayoutInflater inflater = getLayoutInflater();
                     convertView = inflater.inflate(android.R.layout.simple_list_item_2, parent, false);
                 }
-                Student student = (Student) getItem(position);
+                //todo change approach access to list of students
+                Student student = (Student)group.getStudents().toArray()[position];
                 TextView label = (TextView) convertView.findViewById(android.R.id.text1);
                 label.setText(student.getName());
                 TextView label2 = (TextView) convertView.findViewById(android.R.id.text2);
                 label2.setText(student.getLastName());
                 return convertView;
+            }
+            @Override
+            public int getCount(){
+                 return group.getStudents().size();
             }
         });
         TextView groupName = (TextView) findViewById(R.id.group_name);
@@ -60,34 +87,24 @@ public class StudentListActivity extends ListActivity {
                 startActivityForResult(addIntent, STUDENT_ADD);
             }
         });
-        btnSave = (Button)findViewById(R.id.button_save);
-        btnSave.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent returnIntent = new Intent();
-                returnIntent.putExtra(GroupListActivity.GROUP,group);
-                setResult(RESULT_OK,returnIntent);
-                StudentListActivity.this.finish();
-            }
-        });
 
     }
 
     @Override
     protected void onListItemClick(ListView l, View v, int position, long id) {
-        ToggleButton toggleButton = (ToggleButton)findViewById(R.id.button_edit_remove);
+        ToggleButton toggleButton = (ToggleButton) findViewById(R.id.button_edit_remove);
         selectIndex = position;
-        Student student = (Student) l.getItemAtPosition(position);
-        if(toggleButton.isChecked()){
+        final Student student = (Student)group.getStudents().toArray()[position];
+        if (toggleButton.isChecked()) {
             Intent addIntent = new Intent();
             addIntent.setClass(this, StudentActivity.class);
-            addIntent.putExtra(StudentListActivity.STUDENT,student);
+            addIntent.putExtra(StudentListActivity.STUDENT_ID,student.getId());
             startActivityForResult(addIntent, STUDENT_EDIT);
-        }else{
+        } else {
             onRemoveSelected = new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialogInterface, int i) {
-                    removeStudent(selectIndex);
+                    removeStudent(student);
                 }
             };
             showDialog(STUDENT_REMOVE);
@@ -95,8 +112,8 @@ public class StudentListActivity extends ListActivity {
     }
 
     @Override
-    public Dialog onCreateDialog (int id ){
-        switch (id){
+    public Dialog onCreateDialog(int id) {
+        switch (id) {
             case STUDENT_REMOVE:
                 return new AlertDialog.Builder(this)
                         .setMessage(getString(R.string.is_delete_student))
@@ -114,44 +131,57 @@ public class StudentListActivity extends ListActivity {
     }
 
     @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data){
-        Student  student;
-        if(resultCode == RESULT_OK){
-            switch (requestCode){
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        Student student;
+        int studentId;
+        if (resultCode == RESULT_OK) {
+            switch (requestCode) {
                 case StudentListActivity.STUDENT_EDIT:
-                    student = (Student)data.getParcelableExtra(StudentListActivity.STUDENT);
-                    setStudent(selectIndex,student) ;
+                    Log.v(StudentListActivity.TAG,"student edit");
+                    studentId = data.getIntExtra(StudentListActivity.STUDENT_ID,0);
+                    try {
+                        Dao<Student, Integer> dao = getHelper().getStudentDao();
+                        QueryBuilder<Student, Integer> builder = dao.queryBuilder();
+                        builder.where().eq(Student.ID, studentId);
+                        student = dao.query(builder.prepare()).get(0);
+                        group.getStudents().update(student);
+                    } catch (SQLException e) {
+                        throw new RuntimeException(e);
+                    }
                     break;
                 case StudentListActivity.STUDENT_ADD:
-                    student = (Student)data.getParcelableExtra(StudentListActivity.STUDENT);
-                    addStudent(student) ;
+                    Log.v(StudentListActivity.TAG,"student add");
+                    studentId = data.getIntExtra(StudentListActivity.STUDENT_ID,0);
+                    try {
+                        Dao<Student, Integer> dao = getHelper().getStudentDao();
+                        QueryBuilder<Student, Integer> builder = dao.queryBuilder();
+                        builder.where().eq(Student.ID, studentId);
+                        student = dao.query(builder.prepare()).get(0);
+                        student.setGroup(group);
+                        dao.update(student);
+                        group.getStudents().update(student);
+                    } catch (SQLException e) {
+                        throw new RuntimeException(e);
+                    }
+                    getListView().invalidate();
                     break;
             }
         }
     }
 
-    private void setStudent(int index,Student student){
-        group.set(index, student);
-        onListChange();
+
+    private void removeStudent(Student student) {
+        group.getStudents().remove(student);
+        try{
+            Dao<Student, Integer> dao = getHelper().getStudentDao();
+            dao.delete(student);
+            group.getStudents().update(student);
+        }
+        catch (SQLException e){
+            throw new RuntimeException(e);
+        }
+        Log.v(StudentListActivity.TAG,"student remove");
+        getListView().invalidate();
     }
-
-    private void addStudent(Student student){
-        group.add(student);
-        onListChange();
-    }
-
-    private void removeStudent(int index){
-        group.remove(index);
-        onListChange();
-    }
-
-    private void onListChange(){
-        btnSave.setVisibility(View.VISIBLE);
-        ListView list = getListView();
-        list.invalidateViews();
-    }
-
-
-
 
 }
