@@ -17,11 +17,10 @@ public final class R {
     public static final class id {
         public static final int button_add=0x7f060002;
         public static final int button_edit_remove=0x7f060001;
-        public static final int button_save=0x7f060007;
+        public static final int button_save=0x7f060006;
         public static final int first_name_input=0x7f060003;
         public static final int group_name=0x7f060000;
         public static final int last_name_input=0x7f060004;
-        public static final int list_sports=0x7f060006;
         public static final int number_input=0x7f060005;
     }
     public static final class layout {

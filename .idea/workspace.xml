@@ -13,23 +13,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="48b671c8-dfcf-4e6e-b183-e80ca631e6a0" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/example/model/DatabaseHelper.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/example/model/Sport.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/example/model/StudentSport.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/stax-1.2.0.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/stax-api-1.0.1.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/xpp3-1.1.3_8.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/example/model/GroupRepository.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AndroidManifest.xml" afterPath="$PROJECT_DIR$/AndroidManifest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/.name" afterPath="$PROJECT_DIR$/.idea/.name" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gen/com/example/BuildConfig.java" afterPath="$PROJECT_DIR$/gen/com/example/BuildConfig.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gen/com/example/R.java" afterPath="$PROJECT_DIR$/gen/com/example/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/group.xml" afterPath="$PROJECT_DIR$/res/layout/group.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/student_edit.xml" afterPath="$PROJECT_DIR$/res/layout/student_edit.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/example/GroupListActivity.java" afterPath="$PROJECT_DIR$/src/com/example/GroupListActivity.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/example/StudentActivity.java" afterPath="$PROJECT_DIR$/src/com/example/StudentActivity.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/example/StudentListActivity.java" afterPath="$PROJECT_DIR$/src/com/example/StudentListActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/example/model/Group.java" afterPath="$PROJECT_DIR$/src/com/example/model/Group.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/example/model/Sport.java" afterPath="$PROJECT_DIR$/src/com/example/model/Sport.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/example/model/Student.java" afterPath="$PROJECT_DIR$/src/com/example/model/Student.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/studentlists.iml" afterPath="$PROJECT_DIR$/studentlists.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/example/model/StudentSport.java" afterPath="$PROJECT_DIR$/src/com/example/model/StudentSport.java" />
     </list>
     <ignored path="studentlists.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -86,7 +81,71 @@
     <favorites_list name="studentlists" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="StudentActivity.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/example/StudentActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="91" column="68" selection-start="3483" selection-end="3483" vertical-scroll-proportion="0.1685254">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Sport.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/example/model/Sport.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="12" column="90" selection-start="342" selection-end="342" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="StudentSport.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/example/model/StudentSport.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="22" column="17" selection-start="543" selection-end="543" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Student.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/example/model/Student.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="44" column="24" selection-start="1066" selection-end="1071" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="group.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/res/layout/group.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="42" column="54" selection-start="1780" selection-end="1780" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="student_edit.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/res/layout/student_edit.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="56" column="61" selection-start="2168" selection-end="2168" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Group.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/example/model/Group.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="50" column="64" selection-start="1100" selection-end="1100" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -96,33 +155,36 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitLogSettings">
+    <option name="myStructureFilterPaths" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/res/layout/droup_add.xml" />
         <option value="$PROJECT_DIR$/res/layout/main.xml" />
         <option value="$PROJECT_DIR$/src/com/example/data/DatabaseHelper.java" />
-        <option value="$PROJECT_DIR$/src/com/example/model/StudentSport.java" />
-        <option value="$PROJECT_DIR$/src/com/example/model/Sport.java" />
         <option value="$PROJECT_DIR$/res/layout/group.xml" />
         <option value="$PROJECT_DIR$/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/src/com/example/model/Group.java" />
         <option value="$PROJECT_DIR$/src/com/example/model/DatabaseHelper.java" />
-        <option value="$PROJECT_DIR$/src/com/example/model/Student.java" />
-        <option value="$PROJECT_DIR$/src/com/example/StudentListActivity.java" />
         <option value="$PROJECT_DIR$/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/res/values/sporrts.xml" />
         <option value="$PROJECT_DIR$/src/com/example/GroupListActivity.java" />
         <option value="$PROJECT_DIR$/res/layout/student_edit.xml" />
+        <option value="$PROJECT_DIR$/src/com/example/StudentListActivity.java" />
+        <option value="C:/Program Files/Android/android-sdk/platforms/android-7/data/res/layout/simple_list_item_multiple_choice.xml" />
+        <option value="$PROJECT_DIR$/src/com/example/model/Student.java" />
+        <option value="$PROJECT_DIR$/src/com/example/model/StudentSport.java" />
+        <option value="$PROJECT_DIR$/src/com/example/model/Sport.java" />
         <option value="$PROJECT_DIR$/src/com/example/StudentActivity.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="72" />
-    <option name="y" value="24" />
-    <option name="width" value="1615" />
-    <option name="height" value="1026" />
+    <option name="x" value="54" />
+    <option name="y" value="-8" />
+    <option name="width" value="1874" />
+    <option name="height" value="1096" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -166,6 +228,20 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="PackagesPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="android_demo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Android_demo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
       <pane id="Scope">
         <subPane subId="Project Files">
           <PATH>
@@ -180,72 +256,18 @@
         <subPane>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="studentlists" />
+              <option name="myItemId" value="android_demo" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="studentlists" />
+              <option name="myItemId" value="android_demo" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="studentlists" />
+              <option name="myItemId" value="android_demo" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="studentlists" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="studentlists" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="example" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="studentlists" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="studentlists" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="example" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="model" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
-      <pane id="PackagesPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="studentlists" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="studentlists" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -254,25 +276,12 @@
   </component>
   <component name="PropertiesComponent">
     <property name="GoToFile.includeJavaFiles" value="false" />
-    <property name="project.structure.last.edited" value="Project" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="OverrideImplement.combined" value="true" />
-    <property name="options.splitter.main.proportions" value="0.3" />
-    <property name="ExportedApkPath" value="$PROJECT_DIR$/studentlists.apk" />
-    <property name="options.lastSelected" value="preferences.editor" />
-    <property name="recentsLimit" value="5" />
-    <property name="MemberChooser.sorted" value="false" />
-    <property name="ExportedModule" value="studentlists" />
-    <property name="project.structure.side.proportion" value="0.2" />
-    <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
-    <property name="AndroidRunProguardForReleaseBuild" value="false" />
-    <property name="KeystoreLocation" value="$PROJECT_DIR$/../keystore" />
-    <property name="KeyAlias" value="key0" />
+    <property name="MemberChooser.sorted" value="false" />
+    <property name="recentsLimit" value="5" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="options.searchVisible" value="true" />
-    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="MemberChooser.copyJavadoc" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -294,7 +303,7 @@
       <recent name="$PROJECT_DIR$/assets" />
     </key>
   </component>
-  <component name="RunManager" selected="Android Application.studentlists">
+  <component name="RunManager" selected="Android Application.Android_demo">
     <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Tests">
       <module name="" />
       <option name="TESTING_TYPE" value="0" />
@@ -311,8 +320,10 @@
       <option name="NETWORK_LATENCY" value="none" />
       <option name="CLEAR_LOGCAT" value="false" />
       <method>
+        <option name="AntTarget" enabled="false" />
         <option name="BuildArtifacts" enabled="false" />
         <option name="Make" enabled="true" />
+        <option name="Maven.BeforeRunTask" enabled="false" />
       </method>
     </configuration>
     <configuration default="true" type="Remote" factoryName="Remote">
@@ -403,12 +414,14 @@
       <option name="NETWORK_LATENCY" value="none" />
       <option name="CLEAR_LOGCAT" value="false" />
       <method>
+        <option name="AntTarget" enabled="false" />
         <option name="BuildArtifacts" enabled="false" />
         <option name="Make" enabled="true" />
+        <option name="Maven.BeforeRunTask" enabled="false" />
       </method>
     </configuration>
     <configuration default="false" name="studentlists" type="AndroidRunConfigurationType" factoryName="Android Application">
-      <module name="studentlists" />
+      <module name="" />
       <option name="ACTIVITY_CLASS" value="com.example.GroupListActivity" />
       <option name="MODE" value="specific_activity" />
       <option name="DEPLOY" value="true" />
@@ -426,8 +439,28 @@
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
-    <list size="1">
+    <configuration default="false" name="Android_demo" type="AndroidRunConfigurationType" factoryName="Android Application">
+      <module name="Android_demo" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="DEPLOY" value="true" />
+      <option name="TARGET_SELECTION_MODE" value="USB_DEVICE" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="COMMAND_LINE" value="" />
+      <option name="WIPE_USER_DATA" value="false" />
+      <option name="DISABLE_BOOT_ANIMATION" value="false" />
+      <option name="NETWORK_SPEED" value="full" />
+      <option name="NETWORK_LATENCY" value="none" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <RunnerSettings RunnerId="AndroidDebugRunner" />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="AndroidDebugRunner" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <list size="2">
       <item index="0" class="java.lang.String" itemvalue="Android Application.studentlists" />
+      <item index="1" class="java.lang.String" itemvalue="Android Application.Android_demo" />
     </list>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
       <Host>localhost</Host>
@@ -453,6 +486,14 @@
     <configuration useDefault="false">$USER_HOME$/.subversion_IDEA</configuration>
     <myIsUseDefaultProxy>false</myIsUseDefaultProxy>
   </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="48b671c8-dfcf-4e6e-b183-e80ca631e6a0" name="Default" comment="" />
+      <created>1341388131870</created>
+      <updated>1341388131870</updated>
+    </task>
+    <servers />
+  </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
       <are-packages-shown value="false" />
@@ -474,28 +515,30 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="72" y="24" width="1615" height="1026" extended-state="0" />
-    <editor active="false" />
+    <frame x="54" y="-8" width="1874" height="1096" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32929516" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3072687" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32905984" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4764957" sideWeight="0.49497488" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24503312" sideWeight="0.5006281" order="12" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32905984" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24893162" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4722222" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32929516" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24827152" sideWeight="0.7610921" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.47687224" sideWeight="0.49497488" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24503312" sideWeight="0.5006281" order="12" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.23890784" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32929516" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2688378" sideWeight="0.7610921" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.47687224" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24914676" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Android Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3289183" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24757804" sideWeight="0.867846" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.132154" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.26865673" sideWeight="0.52350426" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4764957" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Android Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3289183" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32929516" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -555,103 +598,95 @@
   <component name="XDebuggerManager">
     <breakpoint-manager />
   </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
+  </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$USER_HOME$/source/android-sdk-linux/platforms/android-7/android.jar!/android/view/View.class">
+    <entry file="file://$PROJECT_DIR$/src/com/example/model/DatabaseHelper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="553" column="138" selection-start="24825" selection-end="24825" vertical-scroll-proportion="0.0" />
+        <state line="73" column="64" selection-start="2430" selection-end="2449" vertical-scroll-proportion="0.6487119" />
       </provider>
     </entry>
-    <entry file="jar://$USER_HOME$/source/android-sdk-linux/platforms/android-7/android.jar!/java/sql/SQLException.class">
+    <entry file="file://C:/Program Files/Android/android-sdk/platforms/android-7/data/res/layout/simple_list_item_multiple_choice.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="13" selection-start="146" selection-end="146" vertical-scroll-proportion="0.09009009" />
+        <state line="24" column="33" selection-start="1120" selection-end="1120" vertical-scroll-proportion="0.5347313" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/example/model/Group.java">
+    <entry file="jar://C:/Program Files/Android/android-sdk/platforms/android-7/android.jar!/android/widget/CheckedTextView.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="29" selection-start="691" selection-end="708" vertical-scroll-proportion="0.3828829" />
+        <state line="13" column="16" selection-start="605" selection-end="605" vertical-scroll-proportion="0.25987262" />
       </provider>
     </entry>
-    <entry file="jar://$USER_HOME$/source/android-sdk-linux/platforms/android-7/android.jar!/java/util/Iterator.class">
+    <entry file="jar://C:/Program Files/Android/android-sdk/platforms/android-7/android.jar!/android/app/ListActivity.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="17" selection-start="151" selection-end="151" vertical-scroll-proportion="0.09009009" />
+        <state line="17" column="28" selection-start="660" selection-end="672" vertical-scroll-proportion="0.34649682" />
       </provider>
     </entry>
-    <entry file="jar://$USER_HOME$/source/android-sdk-linux/platforms/android-7/android.jar!/java/util/Collection.class">
+    <entry file="jar://$PROJECT_DIR$/libs/ormlite-android-4.41.jar!/com/j256/ormlite/android/apptools/OrmLiteBaseListActivity.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="14" selection-start="538" selection-end="549" vertical-scroll-proportion="0.0" />
+        <state line="5" column="144" selection-start="302" selection-end="302" vertical-scroll-proportion="0.08947369" />
       </provider>
     </entry>
-    <entry file="jar://$PROJECT_DIR$/libs/ormlite-core-4.41.jar!/com/j256/ormlite/stmt/QueryBuilder.class">
+    <entry file="jar://$PROJECT_DIR$/libs/ormlite-core-4.41.jar!/com/j256/ormlite/dao/ForeignCollection.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="13" selection-start="159" selection-end="159" vertical-scroll-proportion="0.0990099" />
+        <state line="5" column="67" selection-start="202" selection-end="212" vertical-scroll-proportion="0.10445469" />
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Android/android-sdk/platforms/android-7/android.jar!/java/util/Collection.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="33" column="23" selection-start="778" selection-end="778" vertical-scroll-proportion="0.77366865" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/example/StudentListActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="95" column="47" selection-start="3801" selection-end="3801" vertical-scroll-proportion="0.33261338" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/example/GroupListActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="163" column="71" selection-start="6033" selection-end="6033" vertical-scroll-proportion="-0.11333334" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/example/model/Sport.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="11" selection-start="539" selection-end="539" vertical-scroll-proportion="0.0" />
+        <state line="12" column="90" selection-start="342" selection-end="342" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="jar://$PROJECT_DIR$/libs/ormlite-core-4.41.jar!/com/j256/ormlite/dao/Dao.class">
+    <entry file="file://$PROJECT_DIR$/src/com/example/model/StudentSport.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="17" selection-start="162" selection-end="162" vertical-scroll-proportion="0.0">
+        <state line="22" column="17" selection-start="543" selection-end="543" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/example/model/Student.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="44" column="24" selection-start="1066" selection-end="1071" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/group.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="42" column="54" selection-start="1780" selection-end="1780" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/student_edit.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="56" column="61" selection-start="2168" selection-end="2168" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/example/model/Group.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="50" column="64" selection-start="1100" selection-end="1100" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/example/StudentActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="65" column="86" selection-start="2206" selection-end="2206" vertical-scroll-proportion="0.06908665">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/student_edit.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="60" column="29" selection-start="2342" selection-end="2342" vertical-scroll-proportion="0.66627634">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/example/GroupListActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="66" selection-start="788" selection-end="811" vertical-scroll-proportion="0.01783591">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/values/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="7" selection-start="58" selection-end="58" vertical-scroll-proportion="0.035128806">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/values/sporrts.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="4" selection-start="51" selection-end="51" vertical-scroll-proportion="0.035128806">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/example/StudentListActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="165" column="149" selection-start="7047" selection-end="7047" vertical-scroll-proportion="0.5081967">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/example/model/DatabaseHelper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="73" column="64" selection-start="2430" selection-end="2449" vertical-scroll-proportion="0.6487119">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/example/model/Student.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="78" column="5" selection-start="1660" selection-end="1660" vertical-scroll-proportion="0.68384075">
+        <state line="91" column="68" selection-start="3483" selection-end="3483" vertical-scroll-proportion="0.1685254">
           <folding />
         </state>
       </provider>

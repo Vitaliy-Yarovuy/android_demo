@@ -78,6 +78,10 @@ public class Student  {
         this.group = group;
     }
 
+    public ForeignCollection<StudentSport> getStudentSport(){
+        return studentSports;
+    }
+
     @Override
     public String toString(){
         StringBuilder buff= new StringBuilder();

@@ -37,7 +37,6 @@ public class StudentListActivity extends OrmLiteBaseListActivity<DatabaseHelper>
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.group);
-
         try {
             int groupId = (int) getIntent().getIntExtra(GroupListActivity.GROUP_ID, 0);
             Dao<Group, Integer> dao = getHelper().getGroupDao();

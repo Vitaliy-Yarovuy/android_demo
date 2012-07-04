@@ -11,4 +11,20 @@ public class StudentSport {
     private Student student;
     @DatabaseField(foreign = true)
     private Sport sport;
+
+    public Student getStudent() {
+        return student;
+    }
+
+    public void setStudent(Student student) {
+        this.student = student;
+    }
+
+    public Sport getSport() {
+        return sport;
+    }
+
+    public void setSport(Sport sport) {
+        this.sport = sport;
+    }
 }

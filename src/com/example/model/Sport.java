@@ -54,4 +54,7 @@ public class Sport {
     }
 
 
+    public Integer getId() {
+        return id;
+    }
 }
